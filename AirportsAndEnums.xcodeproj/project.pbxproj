@@ -21,6 +21,7 @@
 		5DD0D89E1D32C9BA00DC005F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD0D89D1D32C9BA00DC005F /* AppDelegate.swift */; };
 		5DD0D8A81D32C9BA00DC005F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DD0D8A61D32C9BA00DC005F /* LaunchScreen.storyboard */; };
 		5DD934EC1D383C3700E13B9C /* AirportsAndEnumsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD934EB1D383C3700E13B9C /* AirportsAndEnumsTests.swift */; };
+		B5B032FA1DA5382D00572C40 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B032F91DA5382D00572C40 /* Enum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		674A9D101F8F215179B07450 /* Pods-AirportsAndEnumsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirportsAndEnumsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirportsAndEnumsTests/Pods-AirportsAndEnumsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8251A0641EC5C69867795C5F /* Pods_AirportsAndEnums.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirportsAndEnums.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A274B9D487C3A35EF7B3331F /* Pods-AirportsAndEnumsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirportsAndEnumsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirportsAndEnumsTests/Pods-AirportsAndEnumsTests.release.xcconfig"; sourceTree = "<group>"; };
+		B5B032F91DA5382D00572C40 /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		CFC2BE30D2CF37F2DD3D54EE /* Pods_AirportsAndEnumsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirportsAndEnumsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25B3B8D7DF22AE5D8AD4469 /* Pods-AirportsAndEnums.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirportsAndEnums.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirportsAndEnums/Pods-AirportsAndEnums.debug.xcconfig"; sourceTree = "<group>"; };
 		E4AD71D32D09955CCF9CA8B8 /* Pods_AirportsAndEnumsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirportsAndEnumsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +124,7 @@
 			children = (
 				5DD0D89D1D32C9BA00DC005F /* AppDelegate.swift */,
 				5D7509E91D32D7A200DF44F9 /* ViewController.swift */,
+				B5B032F91DA5382D00572C40 /* Enum.swift */,
 				5D7509EC1D32D7AA00DF44F9 /* AirportStatus.swift */,
 				5D7509F71D3329E400DF44F9 /* Supporting Files */,
 			);
@@ -369,6 +372,7 @@
 				5D7509F41D3307FC00DF44F9 /* LoaderController.swift in Sources */,
 				5DD0D89E1D32C9BA00DC005F /* AppDelegate.swift in Sources */,
 				5D7509ED1D32D7AA00DF44F9 /* FAAServicesAPI.swift in Sources */,
+				B5B032FA1DA5382D00572C40 /* Enum.swift in Sources */,
 				5D7509F61D33149200DF44F9 /* CustomSegue.swift in Sources */,
 				5D7509EE1D32D7AA00DF44F9 /* AirportStatus.swift in Sources */,
 			);

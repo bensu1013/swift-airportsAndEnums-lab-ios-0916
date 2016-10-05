@@ -44,14 +44,29 @@ class ViewController: UIViewController {
     var feltTemp: FeltTemp = .none
     var windDirection: WindDirection = .V
     var weatherCondition: WeatherCondition = .none
+    var airportCode: AirportCode? {
+        didSet {
+            if let airportDict = airportDictionary {
+                let key = airportCode!.rawValue
+                let status = airportDict[key] as! AirportStatus
+                print(status.name)
+                print(status.delay)
+                print(status.reason)
+                airportStatus = status
+          
+            }
+        }
+    }
     
     // Airport Status Dictionary
     var airportDictionary: NSDictionary? {
         didSet {
+            
             if let airportDict = airportDictionary {
                 let sortedKeys = (airportDict.allKeys as! [String]).sorted(by: <)
+               
                 if let code = sortedKeys.first {
-                    
+                    airportCode = AirportCode(rawValue: code)
                 }
             }
         }
@@ -59,6 +74,7 @@ class ViewController: UIViewController {
     
     // Airport Status
     var statusReceived: Bool = false
+    
     var airportStatus: AirportStatus? {
         didSet {
             statusReceived = true
@@ -75,7 +91,6 @@ class ViewController: UIViewController {
         
         setUpView()
         airportDictionary = AirportStatus.getTestDataDictionary()
-        
     }
 }
 
@@ -269,7 +284,7 @@ extension ViewController {
     // Change status for view
     func changeStatusWithAnimation() {
         if statusReceived {
-            
+            airportCode?.next()
             UIView.transition(with: view, duration: 0.5, options: .transitionFlipFromRight, animations: nil, completion: nil)
         }
     }

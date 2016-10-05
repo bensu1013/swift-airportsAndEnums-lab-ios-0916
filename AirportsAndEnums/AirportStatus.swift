@@ -10,6 +10,8 @@ import Foundation
 
 class AirportStatus {
     
+    static var numberOfTimes: Int = 0
+    
     fileprivate(set) var airportCode: String
     fileprivate(set) var city: String
     fileprivate(set) var delay: String
@@ -28,18 +30,29 @@ class AirportStatus {
     
     init(status: [String: AnyObject]) {
         
+        AirportStatus.numberOfTimes += 1
+        print("What is your value now: \(AirportStatus.numberOfTimes)")
+        
         airportCode = status["IATA"] as? String ?? "NO AIRPORT CODE"
+        print(airportCode)
         city = status["city"] as? String ?? "NO CITY"
+        print(2)
         delay = status["delay"] as? String ?? "NO DELAY STATUS"
+        print(3)
         name = status["name"] as? String ?? "NO NAME"
+        print(4)
         state = status["state"] as? String ?? "NO STATE"
-        avgDelay = status["status"]!["avgDelay"] as? String ?? "NO AVG DELAY"
-        type = status["status"]!["type"] as? String ?? "NO TYPE"
-        reason = status["status"]!["reason"] as? String ?? "NO REASON"
-        tempF = status["weather"]!["temp"] as? String ?? "NO TEMPERATURE"
-        visibility = "\(status["weather"]!["visibility"] as? Int ?? 999)"
-        weather = status["weather"]!["weather"] as? String ?? "NO WEATHER"
-        windSpeed = status["weather"]!["wind"] as? String ?? "NO WIND SPEED"
+        print(5)
+        avgDelay = status["status"]?["avgDelay"] as? String ?? "NO AVG DELAY"
+        print(6)
+        type = status["status"]?["type"] as? String ?? "NO TYPE"
+        print(7)
+        reason = status["status"]?["reason"] as? String ?? "NO REASON"
+        print(8)
+        tempF = status["weather"]?["temp"] as? String ?? "NO TEMPERATURE"
+        visibility = "\(status["weather"]?["visibility"] as? Int ?? 999)"
+        weather = status["weather"]?["weather"] as? String ?? "NO WEATHER"
+        windSpeed = status["weather"]?["wind"] as? String ?? "NO WIND SPEED"
         windDirection = "NO WIND DIRECTION"
         tempFNum = 999
         
